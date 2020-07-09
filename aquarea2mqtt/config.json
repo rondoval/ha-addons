@@ -1,0 +1,38 @@
+{
+    "name": "aquarea2mqtt",
+    "version": "1.0",
+    "slug": "aquarea2mqtt",
+    "description": "Aquarea Service Cloud to MQTT gateway",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "url": "https://www.github.com/rondoval/aquarea2mqtt",
+    "startup": "application",
+    "boot": "auto",
+    "options": {
+        "AquareaServiceCloudURL": "https://aquarea-service.panasonic.com/",
+        "AquareaServiceCloudLogin": null,
+        "AquareaServiceCloudPassword": null,
+        "AquareaTimeout": "10s",
+        "MqttServer": null,
+        "MqttPort": 1883,
+        "MqttLogin": null,
+        "MqttPass": null,
+        "MqttClientID": "aquarea-test-pub",
+        "MqttKeepalive": "60s",
+        "PoolInterval": "20s",
+        "LogSecOffset": 500        
+    },
+    "schema": {
+        "AquareaServiceCloudURL": "url",
+        "AquareaServiceCloudLogin": "email",
+        "AquareaServiceCloudPassword": "password",
+        "AquareaTimeout": "str",
+        "MqttServer": "str",
+        "MqttPort": "port",
+        "MqttLogin": "str",
+        "MqttPass": "password",
+        "MqttClientID": "str",
+        "MqttKeepalive": "str",
+        "PoolInterval": "str",
+        "LogSecOffset": "int"
+    }
+  }
