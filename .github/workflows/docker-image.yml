@@ -1,4 +1,4 @@
-name: HA plugin build
+name: Plugin build
 
 on:
   push:
@@ -15,7 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - shell: bash
-
     - name: Log in to Docker Hub
       env:
         USERNAME: ${{ secrets.DOCKERUSERNAME }}
