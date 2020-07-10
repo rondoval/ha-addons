@@ -15,9 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Log in to Docker Hub
-      env:
-        USERNAME: ${{ secrets.DOCKERUSERNAME }}
-        PASSWORD: ${{ secrets.DOCKERPASSWORD }}
-      run: docker login -u %USERNAME% -p %PASSWORD%
+      run: echo "${{ secrets.DOCKERPASSWORD }}" | docker login -u ${{ secrets.DOCKERUSERNAME }} --password-stdin
     - name: Build the Docker image
       run: docker run --rm --privileged -v ~/.docker:/root/.docker -v /var/run/docker.sock:/var/run/docker.sock:ro homeassistant/amd64-builder --all -t aquarea2mqtt -r https://github.com/rondoval/ha-addons -b master
