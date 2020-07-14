@@ -1,4 +1,5 @@
 ARG BUILD_FROM
+ARG BUILD_ARCH
 
 FROM golang as builder
 RUN go get github.com/rondoval/aquarea2mqtt \
