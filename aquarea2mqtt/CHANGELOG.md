@@ -1,3 +1,15 @@
+v1.3:
+- graceful shutdown
+- availability reporting
+
+v1.2:
+- improved topic naming scheme
+- Holiday Mode Shift temperature values fixed
+
+v1.1.6: bugfix
+
+v1.1.5: bugfix
+
 v1.1.4: HA discovery - sensors added
 - using values from .../log/... topics
 - note: multi-select and value settings do not have HA discovery
