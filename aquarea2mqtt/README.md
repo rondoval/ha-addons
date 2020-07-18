@@ -3,6 +3,8 @@ It queries the Service Cloud web interface and feeds all data to MQTT into follo
 - aquarea/{deviceID}/log/* - all statistics from Statistics page
 - aquarea/{deviceID}/state/* - current device status
 - aquarea/{deviceID}/settings* - User settings page (note: Service settings are not available)
+- aquarea/state - Service status; "online" if conneted to Service Cloud
+- homeassistant/+/{deviceID}/* - Home Assistant MQTT configuration topics for sensors, binary sensors and switches
 
 In order to change settings send message to aquarea/{deviceID}/settings/+/set with one of the values specified in aquarea/{deviceID}/settings/+/options
 Example:
